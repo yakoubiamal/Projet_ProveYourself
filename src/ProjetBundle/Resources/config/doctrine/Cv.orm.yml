@@ -1,0 +1,98 @@
+ProjetBundle\Entity\Cv:
+    type: entity
+    table: cv
+    indexes:
+        id_etudiant:
+            columns:
+                - id_etudiant
+    id:
+        idCv:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: id_cv
+            generator:
+                strategy: IDENTITY
+    fields:
+        titre:
+            type: string
+            nullable: false
+            length: 20
+            options:
+                fixed: false
+        description:
+            type: text
+            nullable: false
+            length: 65535
+            options:
+                fixed: false
+        experience:
+            type: text
+            nullable: false
+            length: 65535
+            options:
+                fixed: false
+        competence:
+            type: text
+            nullable: false
+            length: 65535
+            options:
+                fixed: false
+        formation:
+            type: text
+            nullable: false
+            length: 65535
+            options:
+                fixed: false
+        blog:
+            type: text
+            nullable: false
+            length: 65535
+            options:
+                fixed: false
+        interet:
+            type: text
+            nullable: false
+            length: 65535
+            options:
+                fixed: false
+        numTel:
+            type: string
+            nullable: false
+            length: 15
+            options:
+                fixed: false
+            column: num_tel
+        reseauSocial:
+            type: text
+            nullable: false
+            length: 65535
+            options:
+                fixed: false
+            column: reseau_social
+        email:
+            type: string
+            nullable: false
+            length: 20
+            options:
+                fixed: false
+        adresse:
+            type: string
+            nullable: false
+            length: 20
+            options:
+                fixed: false
+    manyToOne:
+        idEtudiant:
+            targetEntity: Etudiant
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                id_etudiant:
+                    referencedColumnName: id_etudiant
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

@@ -1,0 +1,55 @@
+ProjetBundle\Entity\Offre:
+    type: entity
+    table: offre
+    indexes:
+        id_membre:
+            columns:
+                - id_membre
+    id:
+        idOffre:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: id_offre
+            generator:
+                strategy: IDENTITY
+    fields:
+        titre:
+            type: string
+            nullable: false
+            length: 30
+            options:
+                fixed: false
+        description:
+            type: text
+            nullable: false
+            length: 65535
+            options:
+                fixed: false
+        pieceJointe:
+            type: text
+            nullable: false
+            length: 65535
+            options:
+                fixed: false
+            column: piece_jointe
+        type:
+            type: string
+            nullable: false
+            length: null
+            options:
+                fixed: false
+    manyToOne:
+        idMembre:
+            targetEntity: Membre
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                id_membre:
+                    referencedColumnName: id_membre
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

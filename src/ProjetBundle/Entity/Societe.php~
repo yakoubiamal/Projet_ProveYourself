@@ -1,0 +1,110 @@
+<?php
+
+namespace ProjetBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Societe
+ *
+ * @ORM\Table(name="societe")
+ * @ORM\Entity
+ */
+class Societe
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id_societe", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $idSociete;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="nom", type="string", length=20, nullable=false)
+     */
+    private $nom;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="dirigeant", type="string", length=20, nullable=false)
+     */
+    private $dirigeant;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="code_commerce", type="string", length=30, nullable=false)
+     */
+    private $codeCommerce;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="code_tva", type="string", length=30, nullable=false)
+     */
+    private $codeTva;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="adresse", type="string", length=15, nullable=false)
+     */
+    private $adresse;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="num_tel", type="string", length=15, nullable=false)
+     */
+    private $numTel;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="num_portable", type="string", length=15, nullable=false)
+     */
+    private $numPortable;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="fax", type="string", length=15, nullable=false)
+     */
+    private $fax;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="email", type="string", length=20, nullable=false)
+     */
+    private $email;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="site_web", type="string", length=20, nullable=false)
+     */
+    private $siteWeb;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="logo", type="string", length=20, nullable=false)
+     */
+    private $logo;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="igit", type="text", length=65535, nullable=false)
+     */
+    private $igit;
+
+
+}
+

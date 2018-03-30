@@ -1,0 +1,64 @@
+<?php
+
+namespace ProjetBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Offre
+ *
+ * @ORM\Table(name="offre", indexes={@ORM\Index(name="id_membre", columns={"id_membre"})})
+ * @ORM\Entity
+ */
+class Offre
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id_offre", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $idOffre;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="titre", type="string", length=30, nullable=false)
+     */
+    private $titre;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="description", type="text", length=65535, nullable=false)
+     */
+    private $description;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="piece_jointe", type="text", length=65535, nullable=false)
+     */
+    private $pieceJointe;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="type", type="string", nullable=false)
+     */
+    private $type;
+
+    /**
+     * @var \ProjetBundle\Entity\Membre
+     *
+     * @ORM\ManyToOne(targetEntity="ProjetBundle\Entity\Membre")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="id_membre", referencedColumnName="id_membre")
+     * })
+     */
+    private $idMembre;
+
+
+}
+

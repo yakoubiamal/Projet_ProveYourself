@@ -1,0 +1,84 @@
+ProjetBundle\Entity\Etudiant:
+    type: entity
+    table: etudiant
+    uniqueConstraints:
+        cin:
+            columns:
+                - cin
+    id:
+        idEtudiant:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: id_etudiant
+            generator:
+                strategy: IDENTITY
+    fields:
+        cin:
+            type: string
+            nullable: false
+            length: 20
+            options:
+                fixed: false
+        nom:
+            type: string
+            nullable: false
+            length: 20
+            options:
+                fixed: false
+        prenom:
+            type: string
+            nullable: false
+            length: 20
+            options:
+                fixed: false
+        dateNaissance:
+            type: date
+            nullable: false
+            column: date_naissance
+        statut:
+            type: string
+            nullable: false
+            length: 20
+            options:
+                fixed: false
+        diplome:
+            type: string
+            nullable: false
+            length: 20
+            options:
+                fixed: false
+        experience:
+            type: text
+            nullable: false
+            length: 65535
+            options:
+                fixed: false
+        competance:
+            type: text
+            nullable: false
+            length: 65535
+            options:
+                fixed: false
+        email:
+            type: string
+            nullable: false
+            length: 20
+            options:
+                fixed: false
+        numTel:
+            type: string
+            nullable: false
+            length: 15
+            options:
+                fixed: false
+            column: num_tel
+        adresse:
+            type: string
+            nullable: false
+            length: 20
+            options:
+                fixed: false
+    lifecycleCallbacks: {  }

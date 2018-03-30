@@ -1,0 +1,33 @@
+ProjetBundle\Entity\Membre:
+    type: entity
+    table: membre
+    id:
+        idMembre:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: id_membre
+            generator:
+                strategy: IDENTITY
+    fields:
+        login:
+            type: string
+            nullable: false
+            length: 30
+            options:
+                fixed: false
+        password:
+            type: string
+            nullable: false
+            length: 30
+            options:
+                fixed: false
+        type:
+            type: string
+            nullable: false
+            length: null
+            options:
+                fixed: false
+    lifecycleCallbacks: {  }

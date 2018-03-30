@@ -1,0 +1,53 @@
+ProjetBundle\Entity\Publication:
+    type: entity
+    table: publication
+    indexes:
+        id_membre:
+            columns:
+                - id_membre
+    id:
+        idPublication:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: id_publication
+            generator:
+                strategy: IDENTITY
+    fields:
+        datePublication:
+            type: date
+            nullable: false
+            column: date_publication
+        contenu:
+            type: text
+            nullable: false
+            length: 65535
+            options:
+                fixed: false
+        pieceJointe:
+            type: text
+            nullable: false
+            length: 65535
+            options:
+                fixed: false
+            column: piece_jointe
+        type:
+            type: string
+            nullable: false
+            length: null
+            options:
+                fixed: false
+    manyToOne:
+        idMembre:
+            targetEntity: Membre
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                id_membre:
+                    referencedColumnName: id_membre
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

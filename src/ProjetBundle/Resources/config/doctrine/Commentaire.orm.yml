@@ -1,0 +1,38 @@
+ProjetBundle\Entity\Commentaire:
+    type: entity
+    table: commentaire
+    id:
+        idCommentaire:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: id_commentaire
+            generator:
+                strategy: IDENTITY
+    fields:
+        idMembre:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            column: id_membre
+        datePublication:
+            type: date
+            nullable: false
+            column: date_publication
+        contenue:
+            type: text
+            nullable: false
+            length: 65535
+            options:
+                fixed: false
+        pieceJointe:
+            type: text
+            nullable: false
+            length: 65535
+            options:
+                fixed: false
+            column: piece_jointe
+    lifecycleCallbacks: {  }

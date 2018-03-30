@@ -1,0 +1,62 @@
+projet_homepage:
+    path:     /
+    defaults: { _controller: ProjetBundle:Default:index }
+
+contact:
+    path:     /contact.html
+    defaults: { _controller: ProjetBundle:Default:contact }
+
+erreur:
+    path:     /erreur.html
+    defaults: { _controller: ProjetBundle:Default:erreur }
+
+edit-profile-basic:
+    path:     /ProfileBasic.html
+    defaults: { _controller: ProjetBundle:Default:ProfileBasic }
+
+ProfileInterests:
+     path:     /ProfileInterests.html
+     defaults: { _controller: ProjetBundle:Default:ProfileInterests }
+
+edit-profile-password:
+     path:     /edit-profile-password.html
+     defaults: { _controller: ProjetBundle:Default:editProfilePassword }
+
+edit-profile-settings:
+    path:     /edit-profile-settings.html
+    defaults: { _controller: ProjetBundle:Default:editProfileSettings }
+
+edit-profile-work-edu:
+    path:     /edit-profile-work-edu
+    defaults: { _controller: ProjetBundle:Default:editProfileWorkEdu }
+
+faq:
+    path:     /faq.html
+    defaults: { _controller: ProjetBundle:Default:faq }
+
+index:
+    path:     /index.html
+    defaults: { _controller: ProjetBundle:Default:index }
+
+index-register:
+    path:     /index-register.html
+    defaults: { _controller: ProjetBundle:Default:indexRegister }
+
+newsfeed:
+    path:     /newsfeed.html
+    defaults: { _controller: ProjetBundle:Default:newsfeed }
+
+newsfeed-friends:
+    path:     /newsfeed-friends.html
+    defaults: { _controller: ProjetBundle:Default:newsfeedFriends }
+
+newsfeed-images:
+    path:     /newsfeed-images.html
+    defaults: { _controller: ProjetBundle:Default:newsfeedImages }
+
+newsfeed-messages:
+    path:     /newsfeed-messages.html
+    defaults: { _controller: ProjetBundle:Default:newsfeedMessages }
+
+
+

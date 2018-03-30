@@ -1,0 +1,92 @@
+ProjetBundle\Entity\Societe:
+    type: entity
+    table: societe
+    id:
+        idSociete:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: id_societe
+            generator:
+                strategy: IDENTITY
+    fields:
+        nom:
+            type: string
+            nullable: false
+            length: 20
+            options:
+                fixed: false
+        dirigeant:
+            type: string
+            nullable: false
+            length: 20
+            options:
+                fixed: false
+        codeCommerce:
+            type: string
+            nullable: false
+            length: 30
+            options:
+                fixed: false
+            column: code_commerce
+        codeTva:
+            type: string
+            nullable: false
+            length: 30
+            options:
+                fixed: false
+            column: code_tva
+        adresse:
+            type: string
+            nullable: false
+            length: 15
+            options:
+                fixed: false
+        numTel:
+            type: string
+            nullable: false
+            length: 15
+            options:
+                fixed: false
+            column: num_tel
+        numPortable:
+            type: string
+            nullable: false
+            length: 15
+            options:
+                fixed: false
+            column: num_portable
+        fax:
+            type: string
+            nullable: false
+            length: 15
+            options:
+                fixed: false
+        email:
+            type: string
+            nullable: false
+            length: 20
+            options:
+                fixed: false
+        siteWeb:
+            type: string
+            nullable: false
+            length: 20
+            options:
+                fixed: false
+            column: site_web
+        logo:
+            type: string
+            nullable: false
+            length: 20
+            options:
+                fixed: false
+        igit:
+            type: text
+            nullable: false
+            length: 65535
+            options:
+                fixed: false
+    lifecycleCallbacks: {  }

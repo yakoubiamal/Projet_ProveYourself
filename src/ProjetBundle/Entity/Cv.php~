@@ -1,0 +1,113 @@
+<?php
+
+namespace ProjetBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Cv
+ *
+ * @ORM\Table(name="cv", indexes={@ORM\Index(name="id_etudiant", columns={"id_etudiant"})})
+ * @ORM\Entity
+ */
+class Cv
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id_cv", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $idCv;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="titre", type="string", length=20, nullable=false)
+     */
+    private $titre;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="description", type="text", length=65535, nullable=false)
+     */
+    private $description;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="experience", type="text", length=65535, nullable=false)
+     */
+    private $experience;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="competence", type="text", length=65535, nullable=false)
+     */
+    private $competence;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="formation", type="text", length=65535, nullable=false)
+     */
+    private $formation;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="blog", type="text", length=65535, nullable=false)
+     */
+    private $blog;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="interet", type="text", length=65535, nullable=false)
+     */
+    private $interet;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="num_tel", type="string", length=15, nullable=false)
+     */
+    private $numTel;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="reseau_social", type="text", length=65535, nullable=false)
+     */
+    private $reseauSocial;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="email", type="string", length=20, nullable=false)
+     */
+    private $email;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="adresse", type="string", length=20, nullable=false)
+     */
+    private $adresse;
+
+    /**
+     * @var \ProjetBundle\Entity\Etudiant
+     *
+     * @ORM\ManyToOne(targetEntity="ProjetBundle\Entity\Etudiant")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="id_etudiant", referencedColumnName="id_etudiant")
+     * })
+     */
+    private $idEtudiant;
+
+
+}
+
